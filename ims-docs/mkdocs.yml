@@ -1,0 +1,41 @@
+site_name: ims-docs
+
+theme:
+  name: material
+  features:
+  - content.action.edit
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
+
+markdown_extensions:
+  - pymdownx.arithmatex:
+      generic: true
+  - pymdownx.critic
+  - pymdownx.caret
+  - pymdownx.keys
+  - pymdownx.mark
+  - pymdownx.tilde
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.superfences
+  - pymdownx.tabbed:
+      alternate_style: true
+  - admonition
+  - pymdownx.details
+
+extra_javascript:
+  - javascripts/mathjax.js
+  - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
+
+nav:
+  - '首页': index.md
+  - '系统基本要求': basic-requirements.md
+  - '需求分析':
+    - '用户故事': user-story.md
+    - '工作流程': workflow.md
+  - '模块和 API':
+    - '模块': module.md
+    - 'API 接口': api.md
+  - '数据库': database.md
+  - '分工与致谢': acknowledgements.md

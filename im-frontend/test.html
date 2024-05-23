@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Responsive Chat UI</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+  }
+  .chat-container {
+    width: 100%;
+    max-width: 500px; /* 最大宽度，避免在大屏幕上过于宽阔 */
+    margin: 20px auto;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .chat-message {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 10px;
+    position: relative;
+  }
+  .chat-message img {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    margin-right: 10px;
+  }
+  .message-content {
+    padding: 10px;
+    border-radius: 5px;
+    flex: 1; /* 让消息内容填充剩余空间 */
+    max-width: 70%;
+  }
+  .received {
+    background-color: #bee3f8;
+    align-self: flex-start;
+  }
+  .sent {
+    background-color: #dcf8c6;
+    align-self: flex-end;
+    justify-content: flex-end;
+  }
+  .timestamp {
+    font-size: 0.8em;
+    color: #888;
+    position: absolute;
+    top: -15px;
+    left: 0;
+    right: 0;
+    text-align: center;
+  }
+  .received .timestamp {
+    left: 40px;
+  }
+  .sent .timestamp {
+    right: 0;
+  }
+  /* 媒体查询：当屏幕尺寸小于 600px 时，调整样式 */
+  @media (max-width: 600px) {
+    .chat-container {
+      padding: 5px;
+    }
+    .chat-message img {
+      width: 28px;
+      height: 28px;
+      margin-right: 5px;
+    }
+    .message-content {
+      padding: 8px;
+    }
+    .timestamp {
+      top: -10px;
+      font-size: 0.7em;
+    }
+  }
+</style>
+</head>
+<body>
+<div class="chat-container">
+  <div class="chat-message received">
+    <img src="path_to_avatar.jpg" alt="Avatar">
+    <div class="message-content">
+      Hi Aiden, how are you? How is the project coming along?
+    </div>
+    <div class="timestamp">10:10 AM, Today</div>
+  </div>
+  <div class="chat-message sent">
+    <img src="path_to_avatar.jpg" alt="Avatar">
+    <div class="message-content">
+      Are we meeting today?
+    </div>
+    <div class="timestamp">10:12 AM, Today</div>
+  </div>
+  <div class="chat-message received">
+    <img src="path_to_avatar.jpg" alt="Avatar">
+    <div class="message-content">
+      Project has been already finished and I have results to show you.
+    </div>
+    <div class="timestamp">10:15 AM, Today</div>
+  </div>
+</div>
+</body>
+</html>

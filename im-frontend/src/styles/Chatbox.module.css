@@ -1,0 +1,42 @@
+.title {
+  padding: 15px 20px;
+  font-size: 18px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.divider {
+  margin: 0;
+  padding: 0;
+}
+
+.messages {
+  padding: 20px;
+  height: calc(100% - 155px);
+  overflow: auto;
+}
+
+.input {
+  border-radius: 0;
+  border: none;
+  resize: none !important;
+  width: 85%;
+  margin-left: 2px;
+  margin-right: 2.5%;
+  font-size: medium;
+}
+
+.submitButton {
+  width: 10%;
+  height: 85px;
+  min-width: 75px;
+  border-radius: 1;
+}
+
+.container {
+  height: 100vh;
+  max-height: 700px;
+  overflow-y: auto;
+  width: 100%;
+  background-color: #f3f3f3;
+}
